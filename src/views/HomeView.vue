@@ -1,5 +1,5 @@
 <script setup lang="ts"></script>
 
 <template>
-  <main>frogs</main>
+  <main>This is a home page</main>
 </template>

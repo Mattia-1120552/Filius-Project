@@ -6,4 +6,7 @@ import MainNavbar from './components/MainNavbar.vue'
   <div class="flex justify-center">
     <MainNavbar />
   </div>
+  <div>
+    <router-view></router-view>
+  </div>
 </template>

@@ -1,16 +1,13 @@
 <script setup lang="ts">
 import { useWindowSize } from '@vueuse/core'
 import { ref } from 'vue'
-import { useRouter } from 'vue-router'
-
-const router = useRouter()
 
 const { width } = useWindowSize()
 
 const menu = ref()
 const items = ref([
   {
-    label: 'Navigation',
+    // label: 'Navigation',
     items: [
       { label: 'Home', icon: 'pi pi-home', to: '/' },
       { label: 'About', icon: 'pi pi-upload', to: '/about' },
@@ -45,17 +42,16 @@ const toggle = (event: string) => {
         />
         <Menu ref="menu" id="overlay_menu" :model="items" :popup="true" style="border: none">
           <template #item="{ item, props }">
-            <RouterLink v-if="item.to" :to="item.to" v-slot="{ href, navigate, isActive }">
-              <a
-                v-bind="props.action"
-                :href="href"
-                @click="navigate"
-                :class="[{ 'text-green-600 font-bold': isActive }]"
-              >
-                <span :class="item.icon"></span>
-                <span class="ml-2">{{ item.label }}</span>
-              </a>
-            </RouterLink>
+            <div class="flex justify-center">
+              <nav>
+                <RouterLink v-if="item.to" :to="item.to" v-slot="{ href, navigate }">
+                  <a v-bind="props.action" :href="href" @click="navigate" class="">
+                    <span :class="item.icon"></span>
+                    <span class="pl-2">{{ item.label }}</span>
+                  </a>
+                </RouterLink>
+              </nav>
+            </div>
           </template>
         </Menu>
       </div>
@@ -65,8 +61,8 @@ const toggle = (event: string) => {
 
 <style scoped>
 nav a.router-link-exact-active {
-  border-top: 3px solid rgb(115, 133, 75);
-  color: rgb(115, 133, 75);
+  border-top: 3px solid var(--p-primary-color);
+  color: var(--p-primary-color);
   cursor: default;
 }
 
@@ -77,6 +73,9 @@ nav a.router-link-exact-active {
   @media only screen and (max-width: 860px) {
     a:hover {
       border-top: none;
+    }
+    nav a.router-link-exact-active {
+      border: none;
     }
   }
 }
