@@ -1,0 +1,18 @@
+/* App.vue main content */
+.slide-right-enter-active,
+.slide-right-leave-active {
+  transition: all 0.25s ease-out;
+}
+
+.slide-right-enter-from,
+.slide-right-appear-from {
+  opacity: 0;
+  transform: translateX(100px);
+}
+
+.slide-right-enter-to,
+.slide-right-appear-to,
+.slide-right-leave-from {
+  opacity: 1;
+  transform: translateX(0);
+}

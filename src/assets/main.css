@@ -2,6 +2,7 @@
 @import 'tailwindcss';
 @import 'tailwindcss-primeui';
 @import 'primeicons/primeicons.css';
+@import './transitions.css';
 
 #app {
   max-width: 1280px;
@@ -15,4 +16,8 @@ a {
   color: rgb(0, 0, 0);
   transition: 0.1s;
   padding: 3px;
+}
+
+body {
+  overflow-y: hidden;
 }

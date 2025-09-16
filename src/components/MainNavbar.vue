@@ -11,6 +11,8 @@ const items = ref([
     items: [
       { label: 'Home', icon: 'pi pi-home', to: '/' },
       { label: 'About', icon: 'pi pi-upload', to: '/about' },
+      { label: 'Social', icon: 'pi pi-sun', to: '/social' },
+      { label: 'Guide', icon: 'pi pi-moon', to: '/guide' },
     ],
   },
 ])
