@@ -7,7 +7,6 @@ const { width } = useWindowSize()
 const menu = ref()
 const items = ref([
   {
-    // label: 'Navigation',
     items: [
       { label: 'Home', icon: 'pi pi-home', to: '/' },
       { label: 'About', icon: 'pi pi-upload', to: '/about' },
@@ -23,8 +22,17 @@ const toggle = (event: string) => {
 </script>
 
 <template>
-  <Menubar style="padding: 1rem 1rem 1rem 1.5rem; border: none" class="w-[100%]">
-    <template #start> <Image src="/favicon.ico" /> </template>
+  <Menubar
+    style="
+      border-color: #f3e5c4;
+      border-width: 3px;
+      /* border-top: none; */
+      border-left: none;
+      border-right: none;
+    "
+    class="w-[100%]"
+  >
+    <template #start> <Image src="/favicon.ico" class="w-[10rem]" /> </template>
     <template #end>
       <div v-if="width > 860">
         <nav>
@@ -42,7 +50,7 @@ const toggle = (event: string) => {
           aria-haspopup="true"
           aria-controls="overlay_menu"
         />
-        <Menu ref="menu" id="overlay_menu" :model="items" :popup="true" style="border: none">
+        <Menu ref="menu" id="overlay_menu" :model="items" :popup="true">
           <template #item="{ item, props }">
             <div class="flex justify-center">
               <nav>
@@ -63,7 +71,7 @@ const toggle = (event: string) => {
 
 <style scoped>
 nav a.router-link-exact-active {
-  border-top: 3px solid var(--p-primary-color);
+  border-top: 3px solid #f3e5c4;
   color: var(--p-primary-color);
   cursor: default;
 }
