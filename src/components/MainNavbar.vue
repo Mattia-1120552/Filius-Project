@@ -1,24 +1,11 @@
 <script setup lang="ts">
 import { useWindowSize } from '@vueuse/core'
-import { ref } from 'vue'
+
 
 const { width } = useWindowSize()
 
-const menu = ref()
-const items = ref([
-  {
-    items: [
-      { label: 'Home', icon: 'pi pi-home', to: '/' },
-      { label: 'About', icon: 'pi pi-upload', to: '/about' },
-      { label: 'Social', icon: 'pi pi-sun', to: '/social' },
-      { label: 'Guide', icon: 'pi pi-moon', to: '/guide' },
-    ],
-  },
-])
 
-const toggle = (event: string) => {
-  menu.value.toggle(event)
-}
+
 </script>
 
 <template>
@@ -42,29 +29,7 @@ const toggle = (event: string) => {
           <RouterLink to="/Guide">Guide</RouterLink>
         </nav>
       </div>
-      <div v-else>
-        <Button
-          type="button"
-          icon="pi pi-bars"
-          @click="toggle"
-          aria-haspopup="true"
-          aria-controls="overlay_menu"
-        />
-        <Menu ref="menu" id="overlay_menu" :model="items" :popup="true">
-          <template #item="{ item, props }">
-            <div class="flex justify-center">
-              <nav>
-                <RouterLink v-if="item.to" :to="item.to" v-slot="{ href, navigate }">
-                  <a v-bind="props.action" :href="href" @click="navigate" class="">
-                    <span :class="item.icon"></span>
-                    <span class="pl-2">{{ item.label }}</span>
-                  </a>
-                </RouterLink>
-              </nav>
-            </div>
-          </template>
-        </Menu>
-      </div>
+
     </template>
   </Menubar>
 </template>
