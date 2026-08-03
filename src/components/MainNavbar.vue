@@ -1,29 +1,16 @@
-<script setup lang="ts">
-import { useWindowSize } from '@vueuse/core'
-
-
-const { width } = useWindowSize()
-
-
-
-
-
-</script>
+<script setup lang="ts"></script>
 
 <template>
   <Menubar
     style="
-      border-color: #f3e5c4;
-      border-width: 3px;
-      /* border-top: none; */
-      border-left: none;
-      border-right: none;
+      background: none;
+      border: none;
     "
     class="w-[100%]"
   >
-    <template #start> <Image src="/favicon.ico" class="w-[10rem]" /> </template>
+    <template #start> <Image src="/logo.png" class="w-[10rem]" /> </template>
     <template #end>
-      <div v-if="width > 860">
+      <div >
         <nav>
           <RouterLink to="/">Home</RouterLink>
           <RouterLink to="/about">About</RouterLink>
@@ -31,29 +18,19 @@ const { width } = useWindowSize()
           <RouterLink to="/Guide">Guide</RouterLink>
         </nav>
       </div>
-
     </template>
   </Menubar>
 </template>
 
 <style scoped>
 nav a.router-link-exact-active {
-  border-top: 3px solid #f3e5c4;
-  color: var(--p-primary-color);
+  color: var(--p-accent-color);
   cursor: default;
 }
 
 @media (hover: hover) {
   a:hover {
-    border-top: 3px solid black;
-  }
-  @media only screen and (max-width: 860px) {
-    a:hover {
-      border-top: none;
-    }
-    nav a.router-link-exact-active {
-      border: none;
-    }
+    color: var(--p-accent-color);
   }
 }
 
@@ -64,5 +41,12 @@ nav a {
   padding: 0 1.3rem;
   font-size: medium;
   font-weight: 500;
+
+
+  font-family: "Montserrat", sans-serif;
+  font-size: 15px;
+  font-weight: 500;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
 }
 </style>
