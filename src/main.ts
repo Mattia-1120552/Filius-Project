@@ -6,7 +6,7 @@ import Aura from '@primeuix/themes/aura';
 import App from './App.vue';
 import router from './router/router'
 
-const license = import.meta.env.PRIMEUI_LICENSE_KEY
+const license = import.meta.env.VITE_PRIMEUI_LICENSE_KEY
 const app = createApp(App)
 app.use(PrimeVue, {
   theme: {
