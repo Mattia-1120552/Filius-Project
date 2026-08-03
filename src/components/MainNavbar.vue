@@ -10,9 +10,10 @@
       <div >
         <nav>
           <RouterLink to="/">Home</RouterLink>
-          <RouterLink to="/about">About</RouterLink>
-          <RouterLink to="/social">Social</RouterLink>
-          <RouterLink to="/Guide">Guide</RouterLink>
+          <RouterLink to="/about">Over mij</RouterLink>
+          <RouterLink to="/diensten">Diensten</RouterLink>
+          <RouterLink to="/portfolio">Portfolio</RouterLink>
+          <RouterLink to="/contact">Contact</RouterLink>
         </nav>
       </div>
     </template>
