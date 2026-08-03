@@ -43,9 +43,7 @@ export const MyPreset = definePreset(Aura, {
         fill: ${dt('primary.400')};
       }
 
-      a {
-        color: ${dt('primary.900')};
-      }
+
     `;
   },
 });
