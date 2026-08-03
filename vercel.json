@@ -1,4 +1,5 @@
 {
+  "buildCommand": "vue-tsc --build && vite build",
   "rewrites": [
     {
       "source": "/(.*)",

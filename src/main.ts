@@ -1,21 +1,22 @@
 import './assets/main.css'
 
-import { createApp } from 'vue'
-import { PrimeVue } from '@primevue/core'
-import App from './App.vue'
+import { createApp } from 'vue';
+import PrimeVue from 'primevue/config';
+import Aura from '@primeuix/themes/aura';
+import App from './App.vue';
 import router from './router/router'
-import { MyPreset } from './theme/presets'
 
-
+const license = import.meta.env.VITE_PRIMEUI_LICENSE_KEY
 const app = createApp(App)
 app.use(PrimeVue, {
   theme: {
-    preset: MyPreset,
+    preset: Aura,
     options: {
       darkModeSelector: 'light',
       prefix: 'p'
     },
   },
+  license: license
 })
 
 app.use(router)
