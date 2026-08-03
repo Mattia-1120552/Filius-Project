@@ -2,10 +2,7 @@
 
 <template>
   <Menubar
-    style="
-      background: none;
-      border: none;
-    "
+    style="background: none;  border: none;"
     class="w-[100%]"
   >
     <template #start> <Image src="/logo.png" class="w-[10rem]" /> </template>
