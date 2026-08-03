@@ -8,8 +8,8 @@ import '@/assets/background_image.css'
 
     <div class="background_image__content">
       <h1 class="background_image__title">
-        <span>Licht en interieur</span>
-        <span>in perfecte harmonie</span>
+        <span>LICHT EN INTERIEUR</span>
+        <span>IN PERFECTE HARMONIE</span>
       </h1>
 
       <button
