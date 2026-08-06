@@ -22,21 +22,18 @@
 
 <style scoped>
 nav a.router-link-exact-active {
-  color: var(--p-accent-color);
-  cursor: default;
-}
+  border-bottom: 2px solid var(--p-accent-color);
 
-@media (hover: hover) {
-  a:hover {
-    color: var(--p-accent-color);
-  }
+  cursor: default;
+
+
 }
 
 nav a {
   display: inline-block;
   margin: 0 0.3rem;
 
-  padding: 0 1.3rem;
+  /* padding: 0 1.3rem; */
   font-size: medium;
   font-weight: 500;
 
@@ -46,5 +43,15 @@ nav a {
   font-weight: 500;
   letter-spacing: 0.18em;
   text-transform: uppercase;
+}
+
+@media (hover: hover) {
+  a:hover {
+    color: var(--p-accent-color);
+  }
+
+  nav a.router-link-exact-active {
+    color: 2px solid var(--p-main-color) !important;
+  }
 }
 </style>
