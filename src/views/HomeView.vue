@@ -1,7 +1,5 @@
 <template>
   <section class="HomeView_Background_image">
-    <div class="background_image__overlay"></div>
-
     <div class="HomeView_Background_Image_content">
       <h1 class="HomeView_Background_image_title">
         <span style="color: #B3B3B3;">licht en interieur</span>
@@ -17,6 +15,7 @@
     </div>
   </section>
 </template>
+
 <style scoped>
 .HomeView_Background_image {
   position: relative;
@@ -78,5 +77,4 @@
 .HomeView_background_image__button:hover {
   background: #bd8d4e;
 }
-
 </style>
