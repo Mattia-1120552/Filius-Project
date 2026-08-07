@@ -2,7 +2,7 @@
   <section class="HomeView_Background_image">
     <div class="HomeView_Background_Image_content">
       <h1 class="HomeView_Background_image_title">
-        <span style="color: #B3B3B3;">licht en interieur</span>
+        <span style="color: var(--p-accent-color);">licht en interieur</span>
         <span>in perfecte harmonie</span>
       </h1>
 
