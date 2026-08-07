@@ -76,5 +76,6 @@
 
 .HomeView_background_image__button:hover {
   background: #bd8d4e;
+  color: rgb(221, 212, 212);
 }
 </style>
