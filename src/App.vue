@@ -6,7 +6,7 @@ import MainNavbar from './components/MainNavbar.vue'
   <div class="flex justify-center">
     <MainNavbar />
   </div>
-  <div class="pt-10 homepage">
+  <div class="pt-7 homepage">
     <Router-view v-slot="{ Component }">
       <Transition name="slide-right" mode="out-in">
         <component :is="Component" />

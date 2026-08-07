@@ -1,8 +1,6 @@
-<script setup lang="ts"></script>
-
 <template>
   <Menubar
-    style="background: none;  border: none;"
+    style="background: none;  border: none; padding: 1rem 1rem 0 1rem"
     class="w-[100%]"
   >
     <template #start> <Image src="/logo.png" class="w-[10rem]" /> </template>
